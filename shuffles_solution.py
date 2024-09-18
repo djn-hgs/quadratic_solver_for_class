@@ -1,12 +1,7 @@
 import math
 
-def count_shuffles(word: str) -> int:
-    unique_chars = set(word)
-    histogram = {a: word.count(a) for a in unique_chars}
-    divisor = math.prod(math.factorial(n) for n in histogram.values())
-    dividend = math.factorial(len(word))
+count_shuffles = lambda word: math.factorial(len(word)) // math.prod(map(math.factorial, map(word.count, set(word))))
 
-    return dividend // divisor
 
 def get_shuffles(word: str) -> [str]:
     pass
