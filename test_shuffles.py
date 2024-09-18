@@ -1,7 +1,7 @@
 import math
 import pytest
 
-from shuffles import count_shuffles
+from shuffles_solution import count_shuffles
 
 test_data = [
     ('GAL', math.factorial(3)),
